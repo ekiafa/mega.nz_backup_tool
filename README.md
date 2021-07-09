@@ -10,8 +10,14 @@ Tool for making back up files and upload them in Mega.nz cloud space,written in 
 
 
 <h2>What is Mega.nz backup tool?</h2>
-<p>Is a small try to combine python programming with cloud storage for educational reasons.With this script user could upload his files with a different way.</p>
-
+<p>Is a small try to combine python programming with cloud storage for educational reasons.With this script user could upload his files with a different way.Fou using this script you must insert your:
+  <ul>
+    <li>account email</li>
+    <li>password</li>
+    <li>names of files you need to upload</li>
+    <li>path in the cloud drive</li>
+    </p>
+  </ul>
 <h2>Execution</h2>
 
 > python3 mega_backup.py
