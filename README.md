@@ -20,6 +20,7 @@ Tool for making back up files and upload them in Mega.nz cloud space,written in 
   </ul>
 <h2>Execution</h2>
 Install the mega package:
+
 > pip3 install mega.py
 
 > python3 mega_backup.py
