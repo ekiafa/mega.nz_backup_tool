@@ -1,8 +1,4 @@
-###########################################################
 
-#Execution: python3 mega_backup.py <name of files> <path>
-
-###########################################################
 import sys,os,time
 from mega import Mega
 
@@ -23,7 +19,6 @@ def upload(list_of_files,path):
 
         
         destination_directory=m.find(path)
-        #print (destination_directory)
         uppedFile = m.upload(srcFile, destination_directory)
         
         print("Successful upload!")
