@@ -4,11 +4,9 @@ from mega import Mega
 
 
 global current_directory
-global destination_directory
 global email
 global password
 global list_of_files
-path=None
 
 def upload(list_of_files,path):
   
@@ -16,17 +14,16 @@ def upload(list_of_files,path):
     m = mega.login(email,password)
     #print(path)
     for src in list_of_files:
-      print(src)
       srcFile = current_directory + src
       if os.path.isfile( srcFile ):
 
         
-        #folder=m.find(path)
+        folder=m.find("test_script")
         
         
         #uppedFile = m.upload(src,folder[0])
         #else:
-        uppedFile = m.upload(src, None)
+        uppedFile = m.upload(src,folder[0])
         
         
         
