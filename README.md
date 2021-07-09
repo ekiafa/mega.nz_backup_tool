@@ -3,6 +3,7 @@ Tool for making back up files and upload them in Mega.nz cloud space,written in 
 
 
 <h2>What is Mega.nz?</h2>
+
  [Mega](https://mega.nz) (stylised in uppercase as MEGA) or Mega.io is a cloud storage and file hosting service offered by Mega Limited.Mega is known for the largest fully featured free cloud storage in the world with 20 GB storage allocation for free accounts.
 
 
