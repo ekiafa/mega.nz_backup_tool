@@ -13,7 +13,8 @@ Tool for making back up files and upload them in Mega.nz cloud space,written in 
 <p>Is a small try to combine python programming with cloud storage for educational reasons.With this script user could upload his files with a different way.</p>
 
 <h2>Execution</h2>
->python3 mega_backup.py
+
+> python3 mega_backup.py
 
 
 <h2>Language</h2>
