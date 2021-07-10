@@ -8,24 +8,19 @@ global email
 global password
 global list_of_files
 
-def upload(list_of_files,path):
+def upload(list_of_files,destination_folder):
   
     mega = Mega({'verbose': True})
     m = mega.login(email,password)
-    #print(path)
     for src in list_of_files:
       srcFile = current_directory + src
       if os.path.isfile( srcFile ):
 
-        
-        folder=m.find("test_script")
-        
-        
-        #uppedFile = m.upload(src,folder[0])
-        #else:
-        uppedFile = m.upload(src,folder[0])
-        
-        
+        if destination_folder==None:
+          uppedFile = m.upload(srcFile,None)
+        else:
+          folder=m.find(destination_folder)        
+          uppedFile = m.upload(srcFile,folder[0])
         
         print("Successful upload!")
         print ('Upped File Link: ' + m.get_upload_link( uppedFile ))
@@ -41,10 +36,8 @@ def main():
   current_directory = os.getcwd() + os.path.sep #get path name of the working directory
  
   
-  
-
-  if len(list_of_files)>=1 and path!=None:
-    upload(list_of_files,path)
+  if len(list_of_files)>=1:
+    upload(list_of_files,destination_folder)
   
   
 
@@ -53,6 +46,6 @@ if __name__ == '__main__':
   email=input("Please insert your Mega's account email: ")
   password=input("Please insert your Mega's account password :")
   list_of_files=input("Please insert file names separated by spaces :").split(" ")
-  path=input("Please insert your destination path in Mega's Cloud Drive :")
+  destination_folder=input("Please insert your destination folder in Mega's Cloud Drive :")
   main()
   
